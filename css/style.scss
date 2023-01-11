@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$primary: #5BC3EB;
+$secondary: #F06449;
+$gray: #36382E;
+$light-gray: #DADAD9;
+$white: #EDE6E3;
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: "Roboto", sans-serif;
+}
+
+.container {
+   max-width: 1100px;
+   margin: 0 auto;
+}
+
+/* ###buttons### */
+.button {
+   text-decoration: none;
+   display: inline-block;
+   padding: 15px 20px;
+   border-radius: 4px;
+   box-shadow: 0 0 5px rgba(0,0,0,0.3);
+   font-size: 20px;
+}
+.primary-button {
+   background-color: $secondary;
+   -webkit-transition: -webkit-filter .5s;
+   transition: -webkit-filter .5s;
+   -webkit-transition: filter .5s;
+   transition: filter .5s;
+}
+.primary-button:hover {
+   color: $white !important;
+   -webkit-filter: brightness(.9);
+   filter: brightness(.9);
+}
+.secondary-button {
+   background-color: $primary;
+   color: $white;
+}
+.secondary-button:hover {
+   filter: brightness(.9);
+}
+
+#navbar {
+   background-color: $primary;
+   color: $white;
+   height: 12vh;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 1000;
+
+   .logo {
+      background-color: $white;
+      width: 50px;
+      height: 50px;
+   }
+
+   .container {
+      display:flex;
+      justify-content: space-between;
+      height: 100%;
+      align-items: center;
+   }
+
+   ul {
+      display: flex;
+      list-style: none;
+      align-items: baseline;
+
+      a {
+         display: block;
+         text-decoration: none;
+         color: $white;
+         text-transform: uppercase;
+         font-size: 20px;
+         padding: 10px 15px;
+         font-weight: 400;
+         transition: color .4s;
+      }
+
+      a:hover {
+         color: $gray;
+      }
+   }
+}
+
+#header {
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("../img/header.jpeg") no-repeat center / cover;
+
+   .content {
+      color: $white;
+      text-align: center;
+
+      h1 {
+         font-size: 60px;
+         letter-spacing: 1px;
+      }
+
+      p {
+         line-height: 2;
+         letter-spacing: .5px;
+         font-size: 20px;
+         margin-bottom: .8em;
+      }
+   }
+}
