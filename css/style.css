@@ -9,9 +9,27 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* ####general classes#### */
 .container {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.title h2 {
+  font-size: 45px;
+}
+.title .title-line {
+  width: 200px;
+  background-color: #5BC3EB;
+  height: 5px;
+  margin: 0 auto;
+  margin-top: 3px;
+  transform: skew(-20deg);
 }
 
 /* ###buttons### */
@@ -22,15 +40,17 @@ body {
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   font-size: 20px;
+  border: 0;
+  outline: 0;
 }
 
 .primary-button {
   background-color: #F06449;
   transition: filter 0.5s;
+  color: #EDE6E3 !important;
 }
 
 .primary-button:hover {
-  color: #EDE6E3 !important;
   filter: brightness(0.9);
 }
 
@@ -46,11 +66,12 @@ body {
 #navbar {
   background-color: #5BC3EB;
   color: #EDE6E3;
-  height: 12vh;
+  height: 80px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 #navbar .logo {
   background-color: #EDE6E3;
@@ -62,6 +83,19 @@ body {
   justify-content: space-between;
   height: 100%;
   align-items: center;
+  padding: 20px;
+}
+#navbar .buttons {
+  display: flex;
+  align-items: center;
+}
+#navbar .buttons .fa {
+  font-size: 30px;
+  padding: 5px;
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-left: 10px;
 }
 #navbar ul {
   display: flex;
@@ -73,7 +107,7 @@ body {
   text-decoration: none;
   color: #EDE6E3;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 19px;
   padding: 10px 15px;
   font-weight: 400;
   transition: color 0.4s;
@@ -81,25 +115,135 @@ body {
 #navbar ul a:hover {
   color: #36382E;
 }
+#navbar .hide-small {
+  display: none;
+}
 
+@media screen and (min-width: 776px) {
+  #navbar .hide-small {
+    display: block;
+  }
+  #navbar .toggleMenu {
+    display: none;
+  }
+}
+/* ####header#### */
 #header {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/header.jpeg") no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../img/pexels-pixabay-159613.jpg") no-repeat center/cover fixed;
 }
 #header .content {
   color: #EDE6E3;
   text-align: center;
 }
 #header .content h1 {
-  font-size: 60px;
+  font-size: 50px;
   letter-spacing: 1px;
 }
 #header .content p {
   line-height: 2;
   letter-spacing: 0.5px;
-  font-size: 20px;
+  font-size: 16px;
+  width: 80%;
+  margin: 0 auto;
   margin-bottom: 0.8em;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media screen and (min-width: 776px) {
+  #header .content h1 {
+    font-size: 60px;
+  }
+  #header .content p {
+    font-size: 20px;
+  }
+}
+/* ####contact#### */
+#contact {
+  background-color: #29335C;
+  color: #EDE6E3;
+}
+#contact form {
+  width: 90%;
+  margin: 0 auto;
+}
+#contact .right {
+  padding: 60px 10px;
+}
+#contact .left {
+  display: none;
+  background: url("../img/listening.jpeg") no-repeat center/cover;
+}
+#contact .form-part {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+#contact .form-part input {
+  display: block;
+  width: 100%;
+  background: none;
+  color: #EDE6E3;
+  border: 0;
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  outline: 0;
+  font-size: 16px;
+}
+#contact .form-part input:focus {
+  border-bottom: 1px solid #EDE6E3;
+}
+#contact .form-part input:-moz-placeholder-shown ~ .fly {
+  bottom: 110%;
+}
+#contact .form-part input:-ms-input-placeholder ~ .fly {
+  bottom: 110%;
+}
+#contact .form-part input:valid ~ .fly, #contact .form-part input:focus ~ .fly, #contact .form-part input:placeholder-shown ~ .fly {
+  bottom: 110%;
+}
+#contact .form-part .fly {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  transition: bottom 0.3s;
+  color: #bbb;
+}
+#contact .form-part textarea {
+  font-family: "Roboto";
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: none;
+  font-size: 16px;
+  outline: 0;
+  color: #EDE6E3;
+  transition: border-color 0.5s;
+}
+#contact .form-part textarea:focus {
+  border-color: #EDE6E3;
+}
+
+@media screen and (min-width: 776px) {
+  #contact {
+    display: flex;
+  }
+  #contact .left {
+    display: block;
+    width: 50%;
+  }
+  #contact .right {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  #contact .left {
+    width: 40%;
+  }
+  #contact .right {
+    width: 60%;
+  }
+}
+/* shop *//*# sourceMappingURL=style.css.map */
