@@ -1,0 +1,41 @@
+.main {
+  padding: 20px;
+}
+.main .title {
+  text-align: left;
+}
+.main .title .title-line {
+  margin: 0;
+}
+.main h2 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.main h3 {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.main p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.main .aside aside {
+  margin-bottom: 20px;
+}
+
+.dark {
+  background-color: #29335c;
+  color: #ede6e3;
+  padding: 15px;
+  border: 2px solid #5bc3eb;
+}
+
+@media screen and (min-width: 776px) {
+  .main {
+    display: flex;
+  }
+  .main main {
+    margin-right: 20px;
+  }
+}/*# sourceMappingURL=about.css.map */

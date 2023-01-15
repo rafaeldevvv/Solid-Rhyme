@@ -1,0 +1,51 @@
+@use "./_colors.scss";
+
+.main {
+   padding: 20px;
+
+   .title {
+      text-align: left;
+
+      .title-line {
+         margin: 0;
+      }
+   }
+
+   h2 {
+      margin-bottom: 10px;
+      font-size: 30px;
+   }
+   h3 {
+      margin-bottom: 10px;
+      font-size: 25px;
+   }
+
+   p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.5;
+   }
+
+   .aside {
+      aside {
+         margin-bottom: 20px;
+      }
+   }
+}
+
+.dark {
+   background-color: colors.$third;
+   color: colors.$white;
+   padding: 15px;
+   border: 2px solid colors.$primary;
+}
+
+@media screen and (min-width: 776px) {
+   .main {
+      display: flex;
+
+      main {
+         margin-right: 20px;
+      }
+   }
+}
