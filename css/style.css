@@ -10,6 +10,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 /* ####general classes#### */
 .container {
   max-width: 1100px;
@@ -87,9 +91,11 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 #navbar .logo {
-  background-color: #ede6e3;
   width: 50px;
   height: 50px;
+}
+#navbar .logo a {
+  display: block;
 }
 #navbar .container {
   display: flex;
@@ -151,6 +157,10 @@ body {
     display: flex !important;
     width: auto;
     max-height: auto !important;
+  }
+
+  #navbar ul a:hover {  
+    transform: none;
   }
   #navbar .toggleMenu {
     display: none;
@@ -374,7 +384,6 @@ body {
   padding: 60px 20px;
 }
 #footer .brand {
-  background-color: #ede6e3;
   height: 50px;
   width: 50px;
   margin-bottom: 20px;
